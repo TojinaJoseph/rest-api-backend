@@ -248,7 +248,7 @@ function routes(app: Express) {
     deleteProductHandler
   );
 
-  app.post("/api/logout", requireUser, logoutHandler);
+  app.post("/api/logout", logoutHandler);
 }
 
 export default routes;
