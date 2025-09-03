@@ -7,5 +7,6 @@ module.exports = {
   refreshTokenTtl: process.env.REFRESHTOKENTTL,
   googleClientId: process.env.GOOGLECLIENTID,
   googleClientSecret: process.env.GOOGLECLIENTSECRET,
-  googleOauthRedirectUrl: "/api/sessions/oauth/google",
+  googleOauthRedirectUrl:
+    "https://rest-api-backend-4zf8.onrender.com/api/sessions/oauth/google",
 };
