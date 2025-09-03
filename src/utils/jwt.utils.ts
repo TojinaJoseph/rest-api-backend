@@ -1,9 +1,9 @@
 import jwt from "jsonwebtoken";
-import config from "config";
+// import config from "config";
 
-const privateKey = config.get<string>("privateKey");
+// const privateKey = config.get<string>("privateKey");
 // const publicKey = config.get<string>("publicKey");
-const publicKey = config.get<string>("publicKey").replace(/\\n/g, "\n");
+// const publicKey = config.get<string>("publicKey").replace(/\\n/g, "\n");
 
 export function signJwt(object: Object, options?: jwt.SignOptions | undefined) {
   return jwt.sign(object, process.env.JWT_SECRET || "your-secret-key", {
