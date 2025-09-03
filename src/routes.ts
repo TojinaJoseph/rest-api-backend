@@ -10,6 +10,7 @@ import {
   deleteSessionHandler,
   getUserSessionHandler,
   googleOauthHandler,
+  logoutHandler,
 } from "./controller/session.controller";
 import { createSessionSchema } from "./schema/session.shema";
 import { requireUser } from "./middleware/requireUser";
@@ -246,6 +247,8 @@ function routes(app: Express) {
     [requireUser, validate(deleteProductSchema)],
     deleteProductHandler
   );
+
+  app.post("/api/logout", requireUser, logoutHandler);
 }
 
 export default routes;
