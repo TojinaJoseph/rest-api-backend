@@ -1,6 +1,6 @@
 module.exports = {
   port: process.env.PORT,
-  origin: "/",
+  origin: process.env.ORIGIN,
   dbUri: process.env.DBURI,
   saltWorkFactor: process.env.SALTWORKFACTOR,
   accessTokenTtl: process.env.ACCESSTOKENTTL,
