@@ -36,10 +36,10 @@ export const deserializeaUser = async (
       res.cookie("accessToken", accessToken, {
         maxAge: 900000,
         httpOnly: true,
-        domain: "localhost",
+        domain: "rest-api-backend-4zf8.onrender.com",
         path: "/",
-        sameSite: "strict",
-        secure: false,
+        sameSite: "none",
+        secure: true,
       });
 
       const result = verifyJwt(newAccessToken);
