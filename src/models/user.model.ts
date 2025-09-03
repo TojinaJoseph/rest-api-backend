@@ -34,8 +34,8 @@ userSchema.pre("save", async function (next) {
   if (!user.isModified("password")) {
     return next();
   }
-
-  const saltRounds = config.get<number>("saltWorkFactor") ?? 10; // Default to 10 if not set
+  const saltRounds = parseInt(config.get("saltWorkFactor"), 10);
+  // const saltRounds = parseInt(config.get("saltWorkFactor")) ?? 10; // Default to 10 if not set
   const salt = await bcrypt.genSalt(saltRounds);
   // const salt = await bcrypt.genSalt(config.get<number>("saltWorkFactor") ?? 10); // Default to 10 if not set
 
