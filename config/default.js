@@ -7,5 +7,5 @@ module.exports = {
   refreshTokenTtl: process.env.REFRESHTOKENTTL,
   googleClientId: process.env.GOOGLECLIENTID,
   googleClientSecret: process.env.GOOGLECLIENTSECRET,
-  googleOAuthRedirectUrl: "/api/sessions/oauth/google",
+  googleOauthRedirectUrl: "/api/sessions/oauth/google",
 };
