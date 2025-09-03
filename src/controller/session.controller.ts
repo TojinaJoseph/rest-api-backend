@@ -17,7 +17,7 @@ import logger from "../utils/logger";
 const accessTokenCookieOptions: CookieOptions = {
   maxAge: 900000,
   httpOnly: true,
-  domain: "https://rest-api-backend-4zf8.onrender.com",
+  domain: "rest-api-backend-4zf8.onrender.com",
   path: "/",
   sameSite: "none",
   secure: true,
